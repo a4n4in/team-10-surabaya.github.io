@@ -1,0 +1,1343 @@
+/* Definisi variabel warna utama untuk tema */
+:root {
+    --primary: #FFDE3E;
+    /* Warna utama */
+    --secondary: #1C2833;
+    /* Warna sekunder */
+    --bg-primary: #1c28337b;
+    /* Warna latar belakang utama dengan transparansi */
+}
+
+/* Gaya dasar untuk elemen body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    width: 100vw;
+    height: 100vh;
+    color: var(--secondary);
+}
+
+/* Gaya CSS untuk landing page*/
+.landing-page {
+    display: flex;
+    margin: 5vh;
+    text-align: center;
+    background: #ffffff;
+    position: fixed;
+    text-align: left;
+    margin-left: 5vw;
+    width: 100vw;
+    height: 100vh;
+}
+
+.logos {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 11vw;
+    height: 7vh;
+    border-radius: 0 40px 40px 0;
+    transition: background-color 0.3s;
+    box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logos img {
+    margin: 1vw;
+    size-adjust: auto;
+    width: 3vw;
+    max-width: 100%;
+    height: auto;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.background img {
+    margin-bottom: 0;
+    width: auto;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.keterangan {
+    width: 35vw;
+    z-index: 10;
+    position: relative;
+}
+
+.keterangan h1 {
+    font-size: 3.5vw;
+    margin-top: 20vh;
+    position: relative;
+    color: solid black;
+    text-shadow: 1px 1px 0 #aaa,
+        2px 2px 0 #777777,
+        3px 3px 0 #454444,
+        4px 4px 0 #aaa,
+        5px 5px 0 #bdbdbd,
+        6px 6px 0 #b9b9b9,
+        7px 7px 0 #ffffff,
+        8px 8px 0 #ffffff,
+        9px 9px 0 #ffffff,
+        10px 10px 0 #ffffff;
+    /* Menambahkan beberapa bayangan untuk efek 3D */
+}
+
+.keterangan h3 {
+    font-size: 1vw;
+}
+
+.keterangan h2 {
+    font-size: 1.5vw;
+    background-color: var(--secondary);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    /* Optional: Adds some padding for better appearance */
+    border-radius: 3px;
+    /* Optional: Rounds the corners */
+}
+
+p {
+    width: 30vw;
+    font-size: 1vw;
+}
+
+#enterButton {
+    background-color: #FFDE3E;
+    color: black;
+    border: none;
+    width: 10vw;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1vw;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: background-color 0.3s;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#enterButton:hover {
+    background-color: #1C2833;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
+/* Gaya untuk header dan navbar */
+header {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+}
+
+nav {
+    display: flex;
+    height: 42px;
+    align-items: center;
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+#logo {
+    width: 30px;
+    margin: 0 10px 0 20px;
+}
+
+#description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 3vh;
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+#description h6 {
+    margin: 0 20px 0 20px;
+}
+
+
+/* Gaya untuk mengatur elemen utama dan sidebar */
+main {
+    padding-top: 60px;
+    display: flex;
+    height: calc(100vh - 60px);
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#sidebar {
+    margin-left: 1vw;
+    margin-top: 0.3vw;
+    padding: 0;
+    width: 9vw;
+    background-color: white;
+    position: fixed;
+    height: 100%;
+    border-right: 3px solid #1C2833;
+    cursor: pointer;
+}
+
+#sidebar a {
+    margin-top: 1vw;
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+#sidebar h5 {
+    padding: 1vw;
+    font-size: 1vw;
+    margin: 0;
+}
+
+#sidebar a.active {
+    border-radius: 50px 0 0 50px;
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+#sidebar a:hover:not(.active) {
+    border-radius: 50px 0 0 50px;
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+
+/*Mengatur tata letak konten utama dengan scroll otomatis*/
+#contents {
+    width: calc(100vw - 10vw);
+    margin-left: 10vw;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    align-content: space-between;
+    background-color: white;
+    overflow: hidden;
+}
+
+.tabcontent {
+    display: none;
+    overflow-y: auto;
+    overflow-x: auto;
+    padding: 1vw;
+    width: 100%;
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+
+footer {
+    width: 100%;
+    height: 9vh;
+    padding: 1px;
+    text-align: center;
+    background-color: var(--secondary);
+    color: lightcyan;
+}
+
+
+/* Style untuk scroll bar vertikal */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-primary);
+    border-radius: 10px;
+    min-height: 10px;
+    width: 10px;
+    border: 1px solid var(--secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #f1f1f1;
+    border-radius: 0 0 10px 0;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+/* Style untuk overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--primary);
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Style untuk animasi loading */
+.loader {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 8px solid var(--primary);
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#contents {
+    overflow: auto;
+}
+
+#judul {
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+#judul h6 {
+    margin-top: -10px;
+    margin-bottom: 10vh;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: 10% 45% 42%;
+    grid-gap: 1%;
+    overflow: hidden;
+    padding: 5px;
+    justify-content: center;
+
+}
+
+/* Style for the dropdown container */
+#filter__dashboard select {
+    background-color: var(--secondary);
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 1.1vw;
+    color: #ffffff;
+    font: bold;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Style for the dropdown arrow */
+#filter__dashboard select::after {
+    content: '\25BC';
+    /* Unicode character for downward arrow */
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    /* Center arrow vertically */
+    transform: translateY(-50%);
+    /* Center arrow vertically */
+    pointer-events: none;
+    color: var(--bg-primary);
+    padding: 10px;
+}
+
+/* Ensure the arrow is visible */
+#filter__dashboard {
+    position: relative;
+}
+
+#filter__dashboard select {
+    padding-right: 30px;
+}
+
+/* Extra styling for better UX */
+#filter__dashboard select:focus {
+    border-color: var(--primary);
+    /* Border color on focus */
+    outline: none;
+    /* Remove outline on focus */
+    box-shadow: 0 0 10px var(--primary);
+    /* Add shadow on focus */
+}
+
+
+.section {
+    margin: 5px;
+    padding: 5px;
+    border: 0 5px solid #7f8994;
+    border-radius: 10px;
+    gap: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    justify-content: space-between
+}
+
+.section__title {
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin: 2vh;
+}
+
+.section canvas {
+    margin-bottom: 1vh;
+}
+
+.section__total-revenue,
+.section__total-transaction {
+    font-size: 2.5vw;
+    color: var(--secondary);
+    box-sizing: content-box;
+}
+
+.icon {
+    width: 30px;
+    margin: 15px 20px 0 20px;
+}
+
+.dropdown {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-color: transparent;
+}
+
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 1vh;
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.insight {
+    display: flex;
+    border-top: 5px solid #000;
+    padding-top: 20px;
+    margin-top: 80px;
+}
+
+.insight h4 {
+    background-color: var(--secondary);
+    color: var(--primary);
+    text-shadow: 0 2px 5px #ffffff;
+    border-radius: 0 50px 50px 0;
+    width: 100px;
+    text-align: center;
+    height: max-content;
+    padding: 1vw;
+}
+
+.insight p {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    background-color: #ffffff;
+    width: 80%;
+    margin-left: 5%;
+    font-size: 12px;
+}
+
+.action {
+    font-size: 12px;
+}
+
+.action h1 {
+    font-size: 2.2vw;
+}
+
+#prevPage,
+#nextPage {
+    background-color: #FFDE3E;
+    color: #1c2833;
+
+    /* Ubah warna teks tombol */
+    padding: 5px 10px;
+    border: 1px solid #1C2833;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1vw;
+    font-weight: bold;
+
+}
+
+#prevPage:hover,
+#nextPage:hover {
+    background-color: #1C2833;
+    /* Ubah warna latar belakang tombol */
+    color: white;
+    /* Ubah warna latar belakang tombol saat mouse di hover */
+}
+
+.filter__data {
+    background-color: #f7f7f7;
+    /* Ubah warna latar belakang filter */
+    padding: 1.2vw;
+    font-size: 1.1vw;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 30vw;
+    /* Ubah lebar filter */
+    margin: 1vh;
+}
+
+.filter__data label {
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+.filter__data input[type="text"] {
+    width: 20vw;
+    /* Ubah lebar input text */
+    font-size: 1vw;
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    float: right;
+}
+
+.filter__data select {
+    width: 50%;
+    float: right;
+    font-size: 1vw;
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#dataTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f2f2f2;
+    /* Ubah warna latar belakang tabel */
+    color: #333;
+    overflow: auto;
+    /* Ubah warna teks */
+    font-size: 10px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e9e9e9;
+}
+
+#dataTable th,
+#dataTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+thead th {
+    background-color: #1c2833;
+    /* Ubah warna latar belakang header */
+    color: white;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: space-between;
+}
+
+.header button {
+    padding: 0;
+    background-color: #1c2833;
+    border: 0;
+    color: #b9b9b9;
+    font-size: 1.5vw;
+}
+
+.bi-caret-down-fill {
+    display: none;
+}
+
+
+#dataTable tr:hover {
+    background-color: #ffdf3e72;
+    /* Ubah warna latar belakang saat mouse di hover */
+}
+
+
+
+.action {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+
+/*style untuk modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+.modal-image {
+    width: 150px;
+    height: auto;
+    margin: 20px 0;
+}
+
+.modal-text {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.modal__button {
+    background-color: #FFDE3E;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.modal__button:hover {
+    background-color: #1C2833;
+    color: white;
+}
+
+
+
+
+/*Gaya untuk halaman team*/
+.profile {
+    display: grid;
+    row-gap: 7vh;
+}
+
+.mentor-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 60vw;
+    margin: 0 auto;
+}
+
+.mentor {
+    text-align: center;
+}
+
+.mentors h2 {
+    font-size: 25px;
+    text-align: center;
+}
+
+.mentor h5 {
+    margin-bottom: 1vh;
+    font-size: 15px;
+}
+
+.mentor-profile {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    flex: 1;
+    flex-direction: column;
+}
+
+.mentor-profile img {
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.mentor-profile h5 {
+    margin: 0;
+}
+
+.team-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 20px;
+}
+
+.team-row {
+    display: flex;
+    margin-bottom: 5vh;
+    justify-content: center;
+}
+
+.team h2 {
+    font-size: 25px;
+    text-align: center;
+}
+
+.team-member {
+    text-align: center;
+    width: 20%;
+    margin-left: 2vw;
+}
+
+.team-member h5 {
+    margin-bottom: 1vh;
+    font-size: 15px;
+}
+
+.team-member img {
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* Popup */
+.popup {
+    display: none;
+    /* Menyembunyikan popup secara default */
+    position: fixed;
+    /* Posisi tetap di layar */
+    top: 50%;
+    /* Jarak atas 50% dari layar */
+    left: 50%;
+    /* Jarak kiri 50% dari layar */
+    transform: translate(-50%, -50%);
+    /* Menggeser popup ke tengah */
+    width: 25vw;
+    height: 50vh;
+    background-color: #f5f5f5;
+    padding: 20px 20px;
+    /* Padding atas/bawah 20px, kiri/kanan 20px */
+    border-radius: 10px;
+    box-shadow: 1 1 10px rgba(0, 0, 0, 0.2);
+    border: 1.5px solid #110909;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Menjajarkan konten ke tengah secara horizontal */
+    height: 100%;
+    justify-content: center;
+    /* Menjajarkan konten ke tengah secara vertikal */
+}
+
+.popup-content p {
+    text-align: left;
+    /* Teks di dalam elemen rata kiri */
+    margin: 8px 0;
+    width: 100%;
+}
+
+.popup-content img {
+    width: 12vw;
+    height: 12vw;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 5px solid var(--primary);
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--secondary);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+/* Gaya khusus untuk tampilan mobile. Ensure responsive layout. */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .landing-page {
+        margin-right: 5vw;
+        margin-left: 0;
+    }
+
+    .logos {
+        margin-left: 5vw;
+        width: 140px;
+        height: 50px;
+    }
+
+    .logos img {
+        width: 40px;
+    }
+
+    .background {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* Adjust height as needed */
+        z-index: 1;
+    }
+
+    /* Media query untuk mengubah background image pada orientasi potret */
+    .background img {
+        content: url('../assets/img/potrait.png');
+    }
+
+    .background img {
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .keterangan {
+        width: 100vw;
+        text-align: center;
+    }
+
+    .keterangan h1 {
+        font-size: 25px;
+        margin-top: 10vh;
+        text-align: center;
+    }
+
+    .keterangan h3 {
+        margin-left: 5vw;
+        font-size: 12px;
+        text-align: left;
+    }
+
+    .keterangan h2 {
+        width: 50vw;
+        font-size: 14px;
+        text-align: center;
+        margin-left: 25%;
+    }
+
+    .keterangan p {
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+        padding: 8px;
+        background-color: #ffffff;
+        width: 70vw;
+        margin-left: 15%;
+        font-size: 12px;
+    }
+
+    #enterButton {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .mentor-container {
+        flex-direction: row;
+        max-width: 100%;
+        gap: 20px;
+    }
+
+    .team-row {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .team-member {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #sidebar {
+        width: 100%;
+        height: 35px;
+        position: fixed;
+        margin-left: 0;
+        margin-top: 1vw;
+        background-color: #ffffff;
+    }
+
+    #sidebar a.active {
+        border-radius: 0 0 5px 5px;
+    }
+
+    #sidebar a {
+        margin-top: 0;
+        margin-right: 5px;
+        float: left;
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    #sidebar a h5 {
+        font-size: 12px;
+    }
+
+    #sidebar a:hover:not(.active) {
+        border-radius: 0 0 5px 5px;
+    }
+
+    #contents {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 25px;
+    }
+
+    .loader {
+        width: 60px;
+        height: 60px;
+    }
+
+    .section__title {
+        font-size: 16px;
+    }
+
+    .section__total-revenue,
+    .section__total-transaction {
+        font-size: 18px
+    }
+
+    #grid-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #filter__dashboard {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3vh;
+    }
+
+    #filter__dashboard select {
+        font-size: 15px;
+    }
+
+    #prevPage,
+    #nextPage {
+        font-size: 10px;
+    }
+
+    .action p {
+        font-size: 11px;
+    }
+
+    .filter__data label {
+        font-size: 12px;
+    }
+
+    .filter__data select {
+        font-size: 9px;
+        width: 50%;
+        margin-left: 10px;
+    }
+
+    .insight h4 {
+        font-size: 15px;
+        width: 130px;
+    }
+
+    .insight p {
+        font-size: 11px;
+    }
+
+    .mentors h2,
+    .team h2 {
+        font-size: 20px;
+    }
+
+    .mentor h5,
+    .team-member h5 {
+        font-size: 12px;
+        margin-bottom: 5vh;
+    }
+
+    .team-member {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .team-member img,
+    .mentor-profile img {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .popup {
+        right: 25vw;
+        height: 40vh;
+    }
+
+    .popup-content h3 {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .popup-content p {
+        font-size: 10px;
+        margin: 4px 0;
+    }
+
+    .popup-content img {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    footer h5 {
+        font-size: 14px;
+    }
+}
+
+
+
+/* Style untuk tampilan mobile halaman contents */
+@media (max-width: 600px) {
+    .landing-page {
+        margin-right: 5vw;
+        margin-left: 0;
+    }
+
+    .logos {
+        margin-left: 5vw;
+        width: 110px;
+        height: 40px;
+    }
+
+    .logos img {
+        width: 30px;
+    }
+
+    .background {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* Adjust height as needed */
+        z-index: 1;
+    }
+
+    /* Media query untuk mengubah background image pada orientasi potret */
+    .background img {
+        content: url('../assets/img/potrait.png');
+    }
+
+    .background img {
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .keterangan {
+        width: 100vw;
+        text-align: center;
+    }
+
+    .keterangan h1 {
+        font-size: 25px;
+        margin-top: 10vh;
+        text-align: center;
+    }
+
+    .keterangan h2 {
+        width: 50vw;
+        font-size: 13px;
+        text-align: center;
+        margin-left: 25%;
+    }
+
+    .keterangan h3 {
+        font-size: 13px;
+        text-align: left;
+        margin-left: 5vw;
+    }
+
+    .keterangan p {
+        margin-left: 15%;
+        width: 70vw;
+        font-size: 12px;
+    }
+
+    #enterButton {
+        width: 15vw;
+        height: 3vh;
+        font-size: 2vw;
+        padding: 0;
+        justify-content: center;
+    }
+
+    #sidebar {
+        width: 100%;
+        height: 35px;
+        position: fixed;
+        margin-left: 0;
+        margin-top: 1vw;
+        background-color: #ffffff;
+    }
+
+    #sidebar a.active {
+        border-radius: 0 0 5px 5px;
+    }
+
+    #sidebar a {
+        margin-top: 0;
+        margin-right: 5px;
+        float: left;
+        padding: 0;
+    }
+
+    #sidebar h5 {
+        padding: 1vw;
+        font-size: 2vw;
+        margin: 0;
+    }
+
+    #sidebar a:hover:not(.active) {
+        border-radius: 0 0 5px 5px;
+    }
+
+    #contents {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 4vh;
+    }
+
+    .loader {
+        width: 60px;
+        height: 60px;
+    }
+
+    .section__title,
+    .section__total-revenue,
+    .section__total-transaction {
+        font-size: 18px;
+    }
+
+    #grid-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #filter__dashboard {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 3vh;
+    }
+
+    #filter__dashboard select {
+
+        font-size: 16px;
+    }
+
+    #judul {
+        font-family: sans-serif;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 8vh;
+    }
+
+    .insight h4 {
+        font-size: 16px;
+        width: 165px;
+    }
+
+    .insight p {
+        font-size: 12px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+    .action p {
+        font-size: 10px;
+    }
+
+    .action h1 {
+        font-size: 3vw;
+    }
+
+    #prevPage,
+    #nextPage {
+        font-size: 8px;
+    }
+
+    .filter__data label {
+        font-size: 12px;
+    }
+
+    .filter__data select {
+        font-size: 10px;
+        width: 50%;
+        margin-left: 10px;
+    }
+
+    .modal-text {
+        font-size: 2vw;
+        text-align: left;
+    }
+
+    .modal__button {
+        font-size: 2vw;
+    }
+
+    .profile {
+        display: contents;
+    }
+
+    .mentor-container {
+        display: flex;
+        flex-direction: row;
+        max-width: 100%;
+        gap: 20px;
+    }
+
+    .team-row {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .mentors h2,
+    .team h2 {
+        margin-top: 3vh;
+        font-size: 3vw;
+    }
+
+    .mentor h5,
+    .team-member h5 {
+        font-size: 2vw;
+        margin-bottom: 5vh;
+    }
+
+    .team-member {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .team-member img,
+    .mentor-profile img {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .popup-content img {
+        width: 26vw;
+        height: 26vw;
+    }
+
+    .popup-content h3 {
+        text-align: center;
+        font-size: 2.3vw;
+    }
+
+    .popup {
+        width: 35vw;
+        height: 40vh;
+    }
+
+    .popup-content p {
+        margin: 4px 0;
+    }
+}
